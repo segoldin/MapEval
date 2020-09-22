@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--    $Id: index.html,v 1.46 2020/07/21 09:19:09 goldin Exp $
+
+Copyright 2020 Sally E. Goldin
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+   This file describes the HTML content of MapEval and calls functions from nav_functions.js
+ 
+   Created by aleksandra  on 2018/12/06 
+ 
+    $Log: index.html,v $
+    Revision 1.46  2020/07/21 09:19:09  goldin
+    remove options for file types
+
+    Revision 1.45  2019/11/20 09:19:03  aleksandra
+    format regionRelatedDiv
+
+    Revision 1.44  2019/11/19 08:44:21  goldin
+    add div with banner image
+
+    Revision 1.43  2019/11/12 21:53:36  aleksandra
+    modified divs in New Query
+
+    Revision 1.42  2019/11/12 10:54:20  goldin
+    added warning about map div
+
+    Revision 1.41  2019/11/12 04:19:38  goldin
+    updated to use Sally's API key for Google JS load
+
+    Revision 1.40  2019/11/11 17:57:11  aleksandra
+    removed default padding
+
+    Revision 1.39  2019/11/05 11:58:49  aleksandra
+    removed wrong padding, marked required fields red
+
+    Revision 1.38  2019/11/05 11:32:36  aleksandra
+    moved script to domElementDeclaration.js in js
+
+    Revision 1.37  2019/11/05 11:06:18  aleksandra
+    changed display of region-related tables to inline
+
+    Revision 1.36  2019/11/05 09:46:03  aleksandra
+    moved style definition to a separate file
+
+    Revision 1.35  2019/11/05 07:41:37  goldin
+    remove API keys from HTML (except for google api download, still an issue)
+
+    Revision 1.34  2019/11/01 21:53:13  aleksandra
+    split regionRelatedTbl in two
+
+    Revision 1.33  2019/11/01 19:57:41  aleksandra
+    moved <style> and <script> to separate files
+
+    Revision 1.32  2019/10/27 07:28:08  aleksandra
+    changes to tables showing related records in cleanup
+
+    Revision 1.31  2019/10/21 11:09:32  goldin
+    Add message about clicking to change center in select center div
+
+    Revision 1.30  2019/10/15 22:01:02  aleksandra
+    added related data tables to CLEAN UP section
+
+    Revision 1.29  2019/10/15 08:52:25  goldin
+    add UI elements to allow user to select image center from map in roads queries
+
+    Revision 1.28  2019/10/11 09:09:50  aleksandra
+    minor changes
+
+    Revision 1.27  2019/10/03 10:49:11  aleksandra
+    deleted bing script to protect API key
+
+    Revision 1.26  2019/09/20 16:53:13  aleksandra
+    modifications in cleanup section
+
+    Revision 1.25  2019/09/17 09:00:04  goldin
+    change API key; add radio buttons for center selecton; add new IDs to dropdowns in the delete screens
+
+    Revision 1.24  2019/09/16 10:23:47  aleksandra
+    minor changes to clean up section
+
+    Revision 1.23  2019/09/13 11:43:12  aleksandra
+    added buttons and dropdowns to cleanup elements
+
+    Revision 1.22  2019/09/13 10:15:47  aleksandra
+    added clean up menu elements
+
+    Revision 1.21  2019/09/03 10:15:43  goldin
+    add utility.js
+
+    Revision 1.20  2019/05/31 11:47:46  goldin
+    integrating linear metrics into web site
+
+    Revision 1.19  2019/03/01 10:04:30  goldin
+    debugging the recalculate operation
+
+    Revision 1.18  2019/02/27 09:38:27  goldin
+    add new recalculate button
+
+    Revision 1.17  2019/02/15 10:12:44  goldin
+    modify to make name matching optional
+
+    Revision 1.16  2019/01/30 04:39:05  aleksandra
+    added a text tip for zoom level on hover in css
+
+    Revision 1.15  2019/01/29 09:57:38  aleksandra
+    changes to do with experiment div and displaying experiment results
+
+    Revision 1.14  2019/01/28 10:24:08  aleksandra
+    minor changes in experiment section
+
+    Revision 1.13  2019/01/28 03:29:33  aleksandra
+    added div to hold experiment results
+
+    Revision 1.12  2019/01/25 02:59:22  aleksandra
+    changed zoom dropdown in new query data
+
+    Revision 1.11  2019/01/23 10:41:25  aleksandra
+    changed background colour of results of query
+
+    Revision 1.10  2019/01/22 11:00:43  aleksandra
+    changes to do with static maps implementation
+
+    Revision 1.9  2019/01/22 07:19:16  aleksandra
+    added zoom level dropdown
+
+    Revision 1.8  2019/01/21 01:42:58  aleksandra
+    removed radio buttons from Experiment section
+
+    Revision 1.7  2019/01/15 12:37:26  aleksandra
+    changed map div size
+
+    Revision 1.6  2019/01/04 09:31:26  aleksandra
+    minor chnages
+
+    Revision 1.5  2019/01/03 10:40:47  aleksandra
+    debugging map div, savequery button, api calls
+
+    Revision 1.12  2018/12/28 13:26:03  aleksandra
+    minor changes to design, epsg dropdown changed to text box input
+
+    Revision 1.11  2018/12/28 04:50:27  aleksandra
+    added borders for map and results description and changed background colour
+
+    Revision 1.10  2018/12/26 14:24:37  aleksandra
+    fixed out of line nav button
+
+    Revision 1.9  2018/12/26 13:03:12  aleksandra
+    chnaged background in newQueryData, added padding and margin to some elements
+
+    Revision 1.8  2018/12/26 03:24:23  aleksandra
+    minor style changes: results table
+
+    Revision 1.7  2018/12/25 11:29:53  aleksandra
+    changes to do with creating new query data
+
+    Revision 1.6  2018/12/24 12:12:47  aleksandra
+    minor changes in display, mostly aligned items
+
+    Revision 1.5  2018/12/24 10:22:05  aleksandra
+    major changes to the display of query results
+
+    Revision 1.4  2018/12/23 08:46:51  aleksandra
+    fixed resetting results table in newQueryData
+
+    Revision 1.3  2018/12/20 10:44:18  aleksandra
+    minor updates
+
+    Revision 1.2  2018/12/19 10:14:21  aleksandra
+    minor changes to implement editable table
+
+    Revision 1.1  2018/12/12 10:12:47  aleksandra
+    most updated index.html
+
+    Revision 1.2  2018/12/10 10:10:28  aleksandra
+    switched fields in table header
+
+    Revision 1.1  2018/12/06 10:32:05  aleksandra
+    created a new index  file with changing html displays, less changing the DOM with JS
+
+
+
+-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>MapEval - Automated Online Map Evaluation</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- W3 school CSS stylesheets -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+	<!-- Bootstrap for icons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Little glyphicon icons for map legend -->
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+
+
+	<!--common for all APIs -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<!-- Scripts for each API provider -->
+	<!-- Bing maps API -->
+	<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+	<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+	<!--Google Maps API -->
+	<!-- CURRENTLY must manually set the key to match what is in the DB -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOGVIFUiUPQxeNFWkaFK1X4CvIjMlnWMk&libraries=places&callback=initMap" async defer></script>
+	<!-- Here Maps API -->
+	<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+	type="text/javascript" charset="utf-8"></script>
+	<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+	type="text/javascript" charset="utf-8"></script>
+
+	<!-- MapQuest API --> 
+	<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+	<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<!-- Leaflet scripts to display points in newQueryData and Experiment -->
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+	<link rel="stylesheet" href=" https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+	<!-- LOCAL SCRIPTS -->
+	<!--js scripts holding functions -->
+	<script type="text/javascript" src="js/utility.js"></script>
+	<script type="text/javascript" src="js/server_api.js"></script>
+	<script type="text/javascript" src="js/map_API_calls.js"></script>
+	<script type="text/javascript" src="js/nav_functions.js"></script>
+	<script type="text/javascript" src="js/secondaryFunctions.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="doGetProviderKeys()">
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-content w3-display-top-middle" style="max-width:1200px">
+		<!--the below doesn't change and is always visible-->	
+		<!-- Header -->
+		<div class="w3-container w3-bar w3-xlarge w3-padding-16">
+			<div class="w3-dropdown-hover" class="w3-bar-item">
+				<button class="w3-button w3-white">DATA SETS</button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<button class="w3-bar-item w3-button" onclick=addRegion()>New Region</button>
+					<button class="w3-bar-item w3-button" onclick=uploadData()>New Upload Data</button>
+					<button class="w3-bar-item w3-button" onclick=newQueryData()>New Query Data</button>
+				</div>
+			</div>
+			<button class="w3-left w3-button w3-bar-item w3-white" onclick=experiment()>EXPERIMENT</button>
+			<button class="w3-left w3-button w3-bar-item w3-white" onclick=addNewProvider()>CONFIGURE</button>
+			<div class="w3-dropdown-hover" class="w3-bar-item">
+				<button class="w3-button w3-white">CLEAN UP</button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<button class="w3-bar-item w3-button" onclick=delQueryData()>Delete query data sets</button>
+					<button class="w3-bar-item w3-button" onclick=delUploadData()>Delete upload data sets</button>
+					<button class="w3-bar-item w3-button" onclick=delExperiment()>Delete experiments</button>
+					<button class="w3-bar-item w3-button" onclick=delRegion()>Delete regions</button>
+				</div>
+			</div>
+			<button class="w3-right w3-bar-item w3-button w3-white" onclick=displayAbout()>About</button>
+			<button class="w3-right w3-bar-item w3-button w3-white" onclick=displayHelp()>Help</button>
+		</div>
+
+		<h1 id="title">AUTOMATED MAP EVALUATION</h1>
+		<div id="bannerdiv" class="w3-cell-row w3-cell-middle">
+		  <img src="coverimagetrans.png" style="display: block; margin-left: auto; margin-right: auto;">
+		</div>  
+								       
+
+		<!-- the below code changes depending on the navigation menu option chosen, visibility changes -->
+		<h2 id="navOptionTitle"></h2>
+		<!-- user input -->
+		<div id="mainContent" class="w3-container" style="margin-bottom: 10px;">
+
+			<!-- New region content - user input -->
+			<div id="newRegDiv" class="w3-cell-row w3-cell-middle" style="display:none;">
+				<!--enter region title -->
+				<h4 id="regTitleLbl">Region Title</h4>
+				<input id="regTitleInput" required></input>
+				<!-- enter bounding box coordinates -->
+				<div class="w3-container">
+					<div class="w3-container w3-cell w3-quarter" style="text-align:right;">
+						<br>
+						<br>
+						<h4>SW corner coordinates</h4>
+						<br>
+						<h4>NE corner coordinates</h4>
+					</div>
+					<div class="w3-container w3-cell w3-third">
+						<h4 style="text-align: center;">Latitude</h4>
+						<input id="S" style="width:90%" onkeypress="return isNumberKey(event)" placeholder="S coordinate" required></input>
+						<input id="N" style="width:90%" onkeypress="return isNumberKey(event)" placeholder="N coordinate" required></input>
+					</div>
+					<div class="w3-container w3-cell w3-third">
+						<h4 style="text-align: center;">Longitude</h4>
+						<input id="W" style="width:90%" onkeypress="return isNumberKey(event)" placeholder="W coordinate" required></input>
+						<input id="E" style="width:90%" onkeypress="return isNumberKey(event)" placeholder="E coordinate" required></input>
+					</div>
+				</div>
+			</div>
+
+			<!-- Drop-downs for region and category, the same for uploadData, newQueryData, Experiment and -->
+				<div class="w3-container w3-cell w3-half" id="regionDropDiv" style="display: none;">
+					<h4>Region</h4>
+					<select id="regionList">
+						<option value="0" selected="selected">- Select region -</option>
+					</select>
+				</div>
+				<div class="w3-container w3-cell w3-half" id="categoryDropDiv" style="display: none;">
+					<h4>Place Category</h4>
+					<select id="categoryList">
+						<option value="0" selected='selected'>- Select category -</option>
+					</select>
+				</div>
+
+
+			<!-- Upload data content -->
+			<div id="uploadDataDiv" style="display:none" class="w3-cell-row">
+				<div id="wait" style="display:none;width:69px;height:89px;position:absolute;top:50%;left:50%;padding:2px;" class="loader"><br>Loading..</div>
+				<div class="w3-container w3-cell w3-half" style="border-top:solid thin;border-bottom:solid thin;padding:10px">
+					<h4>Data source title</h4>
+					<input id="dataSourceTitle" style="width:80%" required>
+
+					<div class="w3-container w3-cell" style="padding:0">
+						<h4>EPSG code</h4>
+						<input id="epsgCodeInput" style="width:80%" placeholder="e.g.4326" onkeypress="return isNumberKey(event)" required>
+					</div>
+					<div class="w3-container w3-cell">
+						<h4>Select file</h4>
+<!--
+						<form id="fileFormat">
+
+							<input type="radio" name='fileFormat' value='shp' checked>.shp</input>
+							<input type="radio" name='fileFormat' value='gml'>.gml</input>
+							<input type="radio" name='fileFormat' value="kml">.kml</input>
+						</form>
+-->
+						<input id="fileObject" type="file" accept=".zip">
+					</div>
+				</div>
+
+				<div class="w3-container w3-cell w3-half">
+					<h4>Comment (optional)</h4>
+					<input id="comment" type="textarea" style="height:70%;width:100%;">
+				</div>		
+			</div>	
+
+
+			<!-- New Query Data content -->
+			<div id="newQueryDataDiv" style="display:none" class="w3-container" style="padding:0">
+				<div class="w3-container w3-cell w3-quarter" style="padding:0">
+					<h4 id='providerListLbl'>All online map providers</h4>
+					<select id="providerList">
+						<option value='0' selected="selected">- Select provider -</option>
+					</select>
+				</div>
+
+				<div id="settingsForRoadsDiv" class="w3-container w3-cell" style="display: none; padding:0">
+					<div class="w3-container w3-cell w3-third" style="padding:0">
+					  <!-- <div style="display:inline;"> -->
+	   				    <h4>Image center</h4>
+					    <input type="radio" name="center" id="defaultcenter" value="default" checked> Region center
+					    <input type="radio" name="center" id="choosecenter" value="choose">Other<br>
+					  <!-- </div> -->
+					</div>
+						<div id="zoomDiv" class="w3-container w3-cell w3-third" style="padding:0">
+							<h4>Zoom</h4>
+							<select id="zoomLevelList">
+								<option value="0" selected="selected">- Select zoom level -</option>
+								<!-- <option value="12">12</option>
+								<option value="13">13</option> -->
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<!-- <option value="17">17</option>
+								<option value="18">18</option> -->
+							</select>
+						</div>
+						<div id="popupZoom" class="w3-container w3-cell w3-third" style="padding:0">
+							<div>
+							The higher the zoom level value, the larger the map scale will be (the area will be smaller with more detail displayed). </div>
+						</div>
+				</div>
+			</div>
+
+			<!-- Query data results -->
+			<div id="displayResults" class="w3-container" style="display: none;">
+				<div id="resultsLeftCol" class="w3-container w3-cell w3-quarter w3-panel w3-topbar w3-bottombar w3-border-red" style="display:block;background-color:white">
+					<div style="padding: 10px;">
+						<h4 id="queriedRegion"></h4>
+						<h4 id="queriedCategory"></h4>
+						<h4 id="queriedProvider"></h4>
+						<h4 id="queryName"></h4>
+					</div>
+					<br>
+					<button id="saveQueryBtn" style="margin: 10px 10px">Save</button>
+					<button id="resetResultsBtn">New Query</button>
+				</div>	
+				<!-- display map -->
+				<div id="resultsRightCol" class="w3-container w3-cell w3-rest">
+					<div id="map" class="w3-panel w3-topbar w3-bottombar w3-border-red" style="width:532px;height:542px;padding:10px;background-color:white;"></div>
+					<div id="googlePoiMap"></div>
+					<img id="staticMap">
+					<!--display table -->
+					<table id="queryResultsTbl" style="display: none">
+						<tr>
+							<th>Name</th>
+							<th>Latitude</th>
+							<th>Longitude</th>
+							<th>Metadata</th>
+							<th>Edit</th>
+						</tr>
+					</table>
+				</div>
+			</div>	
+
+			<!-- Select image center screen -->
+			<div id="selectCenterDiv" class="w3-container" style="display: none;">
+			  <div class="w3-row w3-container">
+			    <div class="w3-cell w3-half">
+			      <h3>Click to select desired center for road image</h3>
+			    </div>  
+			    <div class="w3-cell w3-half">
+			      <h3>(Rectangle shows extent of reference data)</h3>
+			    </div>  
+			  </div>
+			  <div class="w3-row w3-container">
+			    <div class="w3-cell w3-quarter">
+			      <button id="selectCenterBtn" style="margin: 10px">Choose</button>
+			      <button id="cancelCenterBtn" style="margin: 10px">Use Default</button>
+			    </div>
+			    <div id="selectMapContainer" class="w3-container w3-cell w3-rest">
+			      <div id="selectMap" class="w3-panel w3-topbar w3-bottombar w3-border-red" style="width:532px;height:542px;padding:10px;background-color:white;"></div>
+			    </div>
+			    </div> <!-- row -->
+			</div>	
+
+			<!-- Experiment content -->
+			<div id="experimentDiv" style="display:none" class="w3-container">
+				<h4>Select region and category to see available datasets</h4>
+				<div class="w3-cell-row" style="border-top:solid thin;border-bottom:solid thin;">
+					<div class="w3-container w3-cell w3-half" style="padding:0">
+						<h4>Reference data set</h4>
+						<select id="referenceDataList">
+							<option value='0' selected="selected">- Select data set - </option>
+						</select>
+					</div>
+					<div class="w3-container w3-cell w3-half" style="padding:0">
+						<h4>Target data set</h4>
+						<select id="targetDataList">
+							<option value='0' selected="selected">- Select data set -</option>
+						</select>
+					</div>
+				</div>
+				<div class="w3-container w3-cell-row" style="display:inline;">
+				  <div class="w3-cell" id="namesDiv" style="padding:0">
+				     <div style="display:inline; margin: 0;">
+				        <h4 style="margin: 0">Use names for matching</h4>
+				        <input type="checkbox" name="nameCheck" id="nameCheck" value="true" checked></input>
+				     </div>
+				  </div>
+				  <div class="w3-cell" id="bufferDiv">
+				     <div style="display:inline; margin: 0">
+   				        <h4 style="margin: 0">Buffer (m)</h4>
+					<input id="bufferInput" onkeypress="return isNumberKey(event)" required></input>
+				     </div>
+				  </div>
+				</div>
+		</div>
+
+		<!-- Results of metrics calculation -->
+		<div id="metricsDiv" class="w3-container" style="display: none;">
+			<div id="metricsLeftCol" class="w3-container w3-cell w3-quarter w3-panel w3-topbar w3-bottombar w3-border-red" style="display:block;background-color:white">
+				<div style="padding: 10px;">
+					<h4>SET PARAMETERS</h4>
+					<h4 id="refDataLbl"></h4>
+					<h4 id="tarDataLbl"></h4>
+					<h4 id="bufferLbl"></h4>
+					<br>
+					<h4>CALCULATED METRICS</h4>
+					<h4 id="refCountLbl"></h4>
+					<h4 id="matchCountLbl"></h4>
+					<h4 id="avgDistLbl"></h4>
+					<h4 id="densityLbl"></h4>
+					<h4 id="completenessLbl"></h4>
+				</div>
+				<br>
+
+				<button id="saveMetricsBtn" style="margin: 10px">Export as CSV</button>
+				<button id="recalcBtn" style="margin: 10px">Recalculate</button>
+				<button id="resetExperBtn" style="margin: 10px">New Experiment</button>
+			</div>	
+			<!-- display map -->
+			<!-- NB if you change this, also change the code in secondaryFunctions.js:resetExperResults -->
+			<div id="metricsRightCol" class="w3-container w3-cell w3-rest">
+				<div id="matchMap" class="w3-panel w3-topbar w3-bottombar w3-border-red" style="width:532px;height:542px;padding:10px;background-color:white; margin-bottom: 20px;"></div>
+				<table id="matchTbl" style="display: none">
+					<tr>
+						<th style="color: red">Reference point</th>
+						<th style="color: red">Reference coordinates</th>
+						<th style="color: blue">Matched target point</th>
+						<th style="color: blue">Matched coordinates</th>
+						<th>Match distance</th>
+					</tr>
+				</table>
+			</div>
+		</div>	
+
+			<!-- Clean up content in order to DELETE DATA starts here -->
+			<!-- Delete query datasets -->
+			<div id="delQueryDataDiv" style="display:none" class="w3-container">
+				<!-- dropdown of query datasets -->
+				<div class="w3-container w3-cell w3-half" style="padding:0">
+					<h4>Query data set</h4>
+					<select id="targetDataListDel">
+						<option value='0' selected="selected">- Select data set -</option>
+					</select>
+					<div id="targetRelatedDiv" style="display: none;">
+						<table id="targetRelatedTbl"></table>			
+					</div>
+				</div>
+			</div>
+
+			<div id="delUploadDataDiv" style="display:none" class="w3-container">
+				<!-- dropdown of upload datasets -->
+				<div class="w3-container w3-cell w3-half" style="padding:0">
+					<h4>Upload data set</h4>
+					<select id="referenceDataListDel">
+						<option value='0' selected="selected">- Select data set - </option>
+					</select>
+					<div id="referenceRelatedDiv" style="display: none;">
+						<table id="referenceRelatedTbl"></table>
+					</div>
+				</div>
+			</div>
+
+			<div id="delExperimentDiv" style="display:none" class="w3-container">
+				<!-- dropdown of experiments -->
+				<div class="w3-container w3-cell w3-half" style="padding:0">
+					<h4>Experiment</h4>
+					<select id="experListDel">
+						<option value='0' selected="selected">- Select experiment - </option>
+					</select>
+				</div>
+			</div>
+
+			<div id="delRegionDiv" style="display:none" class="w3-container">
+				<div id="regionRelatedDiv" style="display: none;">
+					<table id="regionRelatedReferencesTbl" style="display: inline-table;"></table>
+					<table id="regionRelatedTargetsTbl" style="display: inline-table;"></table>
+				</div>
+			</div>
+	</div>
+
+		<!-- Common for all nav options -->
+		<div id="buttonsDiv" class="w3-display-top-middle" style="display: none;"></div>
+
+		<!-- Configure content -->
+		<div id="configureDiv" style="display:none">
+		</div>
+		<!-- About and help content, regular text -->
+
+		<div id="infoAreaDiv" style="display:none">
+			<p></p>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/domElementDeclarations.js"></script>
+
