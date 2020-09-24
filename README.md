@@ -2,8 +2,6 @@
 
 Basic README for MapEval System                                   
 ===============================                                   
-Created by Sally E. Goldin                                        
-Last update: 2020-09-22                                           
 
 WHAT IS MAPEVAL?
 
@@ -109,9 +107,9 @@ An API key is a special string that provides access to the provider's capabiliti
 
 The loadProviders.sql script includes dummy keys which must be replaced by valid keys, before the script is run, in order for the queries to work. The loadProviders.sql script must be run after the database tables have been created.
 
-QUESTIONS AND PROBLEMS
+The index.html file which instantiates the web interface also references one API key, for Google Maps. Search for "DUMMYAPIKEY" and replace that string with your personal credentials.
 
-Any questions about how to configure or use MapEval should be sent to the author at segoldin53@gmail.com.
+
 
 
 
